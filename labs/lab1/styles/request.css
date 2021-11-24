@@ -1,0 +1,88 @@
+#form-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#target-area {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+#request-form {
+    flex: 1 0 min-content;
+    margin: 3% 0;
+}
+
+#request-form > .form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    min-height: 3em;
+    margin: 0.5em 1%;
+}
+
+#request-form > .form-field > .field-label {
+    flex: 0 0 auto;
+    min-width: 7em;
+    margin: 0.25em 1%;
+    white-space: nowrap;
+    font-weight: bolder;
+}
+
+#request-form > .form-field > .field-content {
+    flex: 1 0 min-content;
+    box-sizing: border-box;
+    margin: 0.25em 1%;
+    text-align: center;
+}
+
+#request-form .field-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#request-form .field-options * {
+    margin: 0.25em 0.25em;
+}
+
+#request-form > .form-controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#request-form.submitted .invalid input,
+#request-form .visited.invalid input {
+    outline: 1px double red;
+}
+
+.shake {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
