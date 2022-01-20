@@ -1,91 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles/style.css"/>
     <script src="js/script.js" type="module"></script>
     <title>lab1</title>
 </head>
-
 <body>
-    <header>
-        <a id="header-logo-group" href="https://se.ifmo.ru/courses/web">
-            <img id="header-logo-pic" src="img/logo_pic.png" />
-            <img id="header-logo-text" src="img/logo_text.png" />
-        </a>
-        <hgroup id="header-title">
-            <h1>Веб-программирование</h1>
-            <h2>Лабораторная работа №1</h2>
-        </hgroup>
-        <div id="header-info">
-            <div>Глазов Анатолий, P3232</div>
-            <div>Вариант 32017</div>
+<header>
+    <a id="header-logo-group" href="https://se.ifmo.ru/courses/web">
+        <img id="header-logo-pic" src="img/logo_pic.png"/>
+        <img id="header-logo-text" src="img/logo_text.png"/>
+    </a>
+    <hgroup id="header-title">
+        <h1>Веб-программирование</h1>
+        <h2>Лабораторная работа №1</h2>
+    </hgroup>
+    <div id="header-info">
+        <div>Глазов Анатолий, P3232</div>
+        <div>Вариант 32017</div>
+    </div>
+</header>
+<main>
+    <section id="section-request">
+        <h2>Request form</h2>
+        <div id='form-block'>
+            <img src="img/area.png" id="target-area">
+            <form id="request-form" action="test.php" method="POST" autocomplete="off" novalidate>
+                <div class="form-field">
+                    <div class="field-label">X coordinate</div>
+                    <div id="field-x" class="field-content field-options">
+                        <label><input type="checkbox" name="x[]" value="-4"><span>-4</span></label>
+                        <label><input type="checkbox" name="x[]" value="-3"><span>-3</span></label>
+                        <label><input type="checkbox" name="x[]" value="-2"><span>-2</span></label>
+                        <label><input type="checkbox" name="x[]" value="-1"><span>-1</span></label>
+                        <label><input type="checkbox" name="x[]" value="0"><span>0</span></label>
+                        <label><input type="checkbox" name="x[]" value="1"><span>1</span></label>
+                        <label><input type="checkbox" name="x[]" value="2"><span>2</span></label>
+                        <label><input type="checkbox" name="x[]" value="3"><span>3</span></label>
+                        <label><input type="checkbox" name="x[]" value="4"><span>4</span></label>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="input-y" class="field-label">Y coordinate</label>
+                    <div id="field-y" class="field-content">
+                        <input type="text" name="y" id="input-y" placeholder="rational number from -3 to 5">
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="field-label">R parameter</div>
+                    <div id="field-r" class="field-content field-options">
+                        <label><input type="radio" name="r" value="1.0"><span>1.0</span></label>
+                        <label><input type="radio" name="r" value="1.5"><span>1.5</span></label>
+                        <label><input type="radio" name="r" value="2.0"><span>2.0</span></label>
+                        <label><input type="radio" name="r" value="2.5"><span>2.5</span></label>
+                        <label><input type="radio" name="r" value="3.0"><span>3.0</span></label>
+                    </div>
+                </div>
+                <div class="form-controls">
+                    <input type="submit" value="TEST">
+                </div>
+            </form>
         </div>
-    </header>
-    <main>
-        <section id="section-request">
-            <h2>Request form</h2>
-            <div id='form-block'>
-                <img src="img/area.png" id="target-area">
-                <form id="request-form" action="test.php" method="POST" autocomplete="off" novalidate>
-                    <div class="form-field">
-                        <div class="field-label">X coordinate</div>
-                        <div id="field-x" class="field-content field-options">
-                            <label><input type="checkbox" name="x[]" value="-4"><span>-4</span></label>
-                            <label><input type="checkbox" name="x[]" value="-3"><span>-3</span></label>
-                            <label><input type="checkbox" name="x[]" value="-2"><span>-2</span></label>
-                            <label><input type="checkbox" name="x[]" value="-1"><span>-1</span></label>
-                            <label><input type="checkbox" name="x[]" value="0"><span>0</span></label>
-                            <label><input type="checkbox" name="x[]" value="1"><span>1</span></label>
-                            <label><input type="checkbox" name="x[]" value="2"><span>2</span></label>
-                            <label><input type="checkbox" name="x[]" value="3"><span>3</span></label>
-                            <label><input type="checkbox" name="x[]" value="4"><span>4</span></label>
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <label for="input-y" class="field-label">Y coordinate</label>
-                        <div id="field-y" class="field-content">
-                            <input type="text" name="y" id="input-y" placeholder="rational number from -3 to 5">
-                        </div>
-                    </div>
-                    <div class="form-field">
-                        <div class="field-label">R parameter</div>
-                        <div id="field-r" class="field-content field-options">
-                            <label><input type="radio" name="r" value="1.0"><span>1.0</span></label>
-                            <label><input type="radio" name="r" value="1.5"><span>1.5</span></label>
-                            <label><input type="radio" name="r" value="2.0"><span>2.0</span></label>
-                            <label><input type="radio" name="r" value="2.5"><span>2.5</span></label>
-                            <label><input type="radio" name="r" value="3.0"><span>3.0</span></label>
-                        </div>
-                    </div>
-                    <div class="form-controls">
-                        <input type="submit" value="TEST">
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section id="section-responses">
-            <h2>Response history</h2>
-            <div id='history-controls'>
-                <button id="clear-history">CLEAR</button>
-            </div>
-            <table id="response-history">
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>X</th>
-                        <th>Y</th>
-                        <th>R</th>
-                        <th>Falls within the area</th>
-                        <th>proccessed in</th>
-                    </tr>
-                </thead>
-            </table>
-        </section>
-    </main>
+    </section>
+    <section id="section-responses">
+        <h2>Response history</h2>
+        <div id='history-controls'>
+            <button id="clear-history">CLEAR</button>
+        </div>
+        <table id="response-history">
+            <thead>
+            <tr>
+                <th>Time</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Falls within the area</th>
+                <th>proccessed in</th>
+            </tr>
+            </thead>
+        </table>
+    </section>
+</main>
 </body>
-
 </html>
