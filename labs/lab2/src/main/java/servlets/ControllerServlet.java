@@ -7,19 +7,20 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "ControllerServlet", value = {"/index", "/check", "/clear"})
+@WebServlet(urlPatterns = "/index")
 public class ControllerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ServletContext context = getServletContext();
         if (RequestDataExtractor.containsAreaData(req)) {
-            req.getRequestDispatcher("/area-check").forward(req, resp);
+            context.getNamedDispatcher("AreaCheckServlet").forward(req, resp);
         } else {
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            context.getNamedDispatcher("index").forward(req, resp);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/history-clear").forward(req, resp);
+        getServletContext().getNamedDispatcher("HistoryClearServlet").forward(req, resp);
     }
 }

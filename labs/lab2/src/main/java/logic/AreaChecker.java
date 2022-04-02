@@ -1,6 +1,6 @@
 package logic;
 
-import models.AreaData;
+import models.RequestData;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public class AreaChecker {
         }
     }
 
-    public static Optional<Boolean> check(AreaData data) {
+    public static Optional<Boolean> check(RequestData data) {
         try {
             boolean result = fallsWithinArea(data.getX(), data.getY(), data.getR());
             return Optional.of(result);

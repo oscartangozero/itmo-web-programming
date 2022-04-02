@@ -1,8 +1,9 @@
 package logic;
 
-import models.AreaData;
+import models.RequestData;
 
 import javax.servlet.http.HttpServletRequest;
+import java.math.BigDecimal;
 import java.util.Optional;
 
 public class RequestDataExtractor {
@@ -12,12 +13,12 @@ public class RequestDataExtractor {
                 || req.getParameter("r") != null;
     }
 
-    public static Optional<AreaData> extractAreaData(HttpServletRequest req) {
+    public static Optional<RequestData> extractAreaData(HttpServletRequest req) {
         try {
-            AreaData data = AreaData.parse(
-                    req.getParameter("x"),
-                    req.getParameter("y"),
-                    req.getParameter("r"));
+            RequestData data = new RequestData(
+                    new BigDecimal(req.getParameter("x")),
+                    new BigDecimal(req.getParameter("y")),
+                    new BigDecimal(req.getParameter("r")));
             return Optional.of(data);
         } catch (NumberFormatException e) {
             return Optional.empty();
