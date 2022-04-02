@@ -1,0 +1,12 @@
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/utils/BigDecimalRangeValidator.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/entities/RequestData.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/RequestAreaBean.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/ControllerBean.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/HistoryManagerBean.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/RadiusSliderBean.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/entities/RequestEntity.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/ClockBean.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/entities/Coordinates.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/FormCoordinatesBean.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/logic/AreaChecker.java
+/home/user/Projects/itmo-web-programming/labs/lab3/src/main/java/ru/ifmo/se/s263931/web/lab3/beans/NavigationControllerBean.java

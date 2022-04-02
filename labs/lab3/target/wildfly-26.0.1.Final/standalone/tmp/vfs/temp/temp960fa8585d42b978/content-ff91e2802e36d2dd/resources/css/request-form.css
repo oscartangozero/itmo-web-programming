@@ -1,0 +1,71 @@
+#form-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#target-area {
+    flex: 0 0 auto;
+    max-width: 100%;
+    margin: 0.5em 1%;
+}
+
+#request-form {
+    flex: 1 0 min-content;
+    margin: 0.5em 1%;
+}
+
+#request-form > .form-field,
+#request-form > .form-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    min-height: 3em;
+    margin: 0.5em 1%;
+}
+
+#request-form > .form-controls {
+    justify-content: flex-end;
+}
+
+#request-form > .form-field {
+    justify-content: space-between;
+}
+
+#request-form > .form-field > .field-label {
+    flex: 0 0 auto;
+    min-width: 7em;
+    margin: 0.25em 1%;
+    white-space: nowrap;
+    font-weight: bolder;
+}
+
+#request-form > .form-field > .field-content {
+    flex: 1 0 min-content;
+    margin: 0.25em 1%;
+    text-align: center;
+}
+
+#request-form > .form-field > .field-content > .field-content-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+#request-form > .form-field > .field-content > .field-content-row > * {
+    margin: 0.1em 0.2em;
+}
+
+input[type='text'] {
+    min-width: min-content;
+    width: 100%;
+    text-align: center;
+}
+
+.error-message {
+    font-size: small;
+    color: red;
+}

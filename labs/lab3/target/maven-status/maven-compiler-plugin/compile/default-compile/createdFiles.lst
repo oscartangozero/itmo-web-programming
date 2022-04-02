@@ -1,0 +1,12 @@
+ru/ifmo/se/s263931/web/lab3/beans/ClockBean.class
+ru/ifmo/se/s263931/web/lab3/logic/AreaChecker.class
+ru/ifmo/se/s263931/web/lab3/beans/RadiusSliderBean.class
+ru/ifmo/se/s263931/web/lab3/beans/HistoryManagerBean.class
+ru/ifmo/se/s263931/web/lab3/utils/BigDecimalRangeValidator.class
+ru/ifmo/se/s263931/web/lab3/beans/RequestAreaBean.class
+ru/ifmo/se/s263931/web/lab3/beans/FormCoordinatesBean.class
+ru/ifmo/se/s263931/web/lab3/beans/ControllerBean.class
+ru/ifmo/se/s263931/web/lab3/entities/RequestEntity.class
+ru/ifmo/se/s263931/web/lab3/beans/NavigationControllerBean.class
+ru/ifmo/se/s263931/web/lab3/entities/RequestData.class
+ru/ifmo/se/s263931/web/lab3/entities/Coordinates.class

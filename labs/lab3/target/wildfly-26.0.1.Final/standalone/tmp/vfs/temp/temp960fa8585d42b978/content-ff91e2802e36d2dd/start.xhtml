@@ -1,0 +1,23 @@
+<ui:composition template="template.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:define name="content">
+        <section>
+            <h:form id="clock-form">
+                <h:outputText id="clock-panel" styleClass="panel-styled" value="#{clock.time}"/>
+                <h:commandButton id="update-clock" style="display: none">
+                    <f:ajax render="clock-panel"/>
+                </h:commandButton>
+                <h:outputScript>
+                    setInterval(() => document.getElementById("clock-form:update-clock").click(), 10_000);
+                </h:outputScript>
+                <div class="controls">
+                    <h:commandButton styleClass="button-styled" value="MAIN PAGE"
+                                     action="#{navigationController.toMain}"/>
+                </div>
+            </h:form>
+        </section>
+    </ui:define>
+</ui:composition>
