@@ -1,9 +1,0 @@
-servlets/AreaCheckServlet.class
-models/RequestRecord.class
-models/RequestData.class
-logic/RequestDataValidator.class
-logic/HistoryProvider.class
-servlets/HistoryClearServlet.class
-logic/AreaChecker.class
-logic/RequestDataExtractor.class
-servlets/ControllerServlet.class

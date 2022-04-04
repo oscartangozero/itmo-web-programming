@@ -1,9 +1,0 @@
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/models/RequestRecord.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/logic/HistoryProvider.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/servlets/AreaCheckServlet.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/models/RequestData.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/servlets/HistoryClearServlet.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/logic/RequestDataValidator.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/servlets/ControllerServlet.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/logic/AreaChecker.java
-/home/user/Projects/itmo-web-programming/labs/lab2/src/main/java/logic/RequestDataExtractor.java
