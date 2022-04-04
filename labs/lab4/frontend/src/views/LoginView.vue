@@ -1,12 +1,16 @@
 <template>
   <Header>
-    <div>Глазов Анатолий, P3232</div>
-    <div>Вариант 32870</div>
+    <div id="author-info">
+      <div>Глазов Анатолий, P3232</div>
+      <div>Вариант 32870</div>
+    </div>
   </Header>
-  <LoginForm/>
+  <main>
+    <LoginForm/>
+  </main>
 </template>
 
 <script setup>
-import LoginForm from "@/components/LoginForm";
-import Header from "@/components/Header";
+import LoginForm from '@/components/LoginForm'
+import Header from '@/components/BasicHeader'
 </script>

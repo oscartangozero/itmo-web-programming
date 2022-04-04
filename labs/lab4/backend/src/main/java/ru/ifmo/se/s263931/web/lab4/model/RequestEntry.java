@@ -1,5 +1,8 @@
 package ru.ifmo.se.s263931.web.lab4.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.time.ZonedDateTime;
 
@@ -16,20 +19,22 @@ public class RequestEntry {
     @Embedded
     private ResponseData response;
 
+    @JsonFormat(pattern = "HH:mm:ss z")
     @Column(name = "time", nullable = false)
     private ZonedDateTime time;
 
-    @Column(name = "user", nullable = false, unique = true)
-    private String username;
+    @JsonIgnore
+    @ManyToOne @JoinColumn(name = "user", nullable = false)
+    private UserEntity user;
 
     public RequestEntry() {
     }
 
-    public RequestEntry(RequestData request, ResponseData response, ZonedDateTime time, String username) {
+    public RequestEntry(RequestData request, ResponseData response, ZonedDateTime time, UserEntity user) {
         this.request = request;
         this.response = response;
         this.time = time;
-        this.username = username;
+        this.user = user;
     }
 
     public Long getId() {
@@ -64,11 +69,11 @@ public class RequestEntry {
         this.time = time;
     }
 
-    public String getUsername() {
-        return username;
+    public UserEntity getUser() {
+        return user;
     }
 
-    public void setUsername(String user) {
-        this.username = user;
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 }

@@ -1,18 +1,20 @@
 package ru.ifmo.se.s263931.web.lab4.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
-@Entity
+@Entity(name = "User")
 @Table(name = "USERS")
 public class UserEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false)
+    @NotEmpty @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @Column(name = "password", nullable = false)
+    @NotEmpty @Column(name = "password", nullable = false)
     private String password;
 
     public UserEntity() {

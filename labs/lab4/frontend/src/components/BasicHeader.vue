@@ -4,12 +4,12 @@
       <img id="header-logo-pic" src="@/assets/logo_pic.png" alt="Уточка">
       <img id="header-logo-text" src="@/assets/logo_text.png" alt="ИТМО ВТ">
     </a>
-    <hgroup id="header-title">
+    <div id="header-title">
       <h1>Веб-программирование</h1>
       <h2>Лабораторная работа №4</h2>
-    </hgroup>
+    </div>
     <div id="header-info">
-      <slot/>
+      <slot></slot>
     </div>
   </header>
 </template>
@@ -18,7 +18,7 @@
 
 </script>
 
-<style scoped>
+<style>
 header {
   box-sizing: border-box;
   width: 100%;
@@ -29,11 +29,20 @@ header {
   align-items: center;
   justify-content: space-evenly;
   font-family: 'Courier New', Courier, monospace;
-  color: var(--header-content);
-  background-color: var(--header-base);
+  color: var(--header-primary);
+  background-color: var(--header-background);
 }
 
-header>* {
+#header-info {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: right;
+  max-width: 500px;
+}
+
+header > * {
   margin: 5px 2%;
 }
 
@@ -63,7 +72,6 @@ header>* {
   text-align: right;
 }
 
-
 @media (max-width: 1000px) {
   #header-logo-text {
     display: none;
@@ -81,7 +89,7 @@ header>* {
     justify-content: space-evenly;
   }
 
-  #header-info>* {
+  #header-info > * {
     margin: 0 1em;
   }
 }

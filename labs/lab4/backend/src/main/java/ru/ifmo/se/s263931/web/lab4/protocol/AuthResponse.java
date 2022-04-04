@@ -1,11 +1,11 @@
 package ru.ifmo.se.s263931.web.lab4.protocol;
 
 public class AuthResponse {
-    private Boolean status;
+    private Boolean success;
     private String message;
 
-    private AuthResponse(boolean status, String message) {
-        this.status = status;
+    private AuthResponse(boolean success, String message) {
+        this.success = success;
         this.message = message;
     }
 
@@ -17,12 +17,12 @@ public class AuthResponse {
         return new AuthResponse(false, cause);
     }
 
-    public Boolean getStatus() {
-        return status;
+    public Boolean getSuccess() {
+        return success;
     }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
+    public void setSuccess(Boolean success) {
+        this.success = success;
     }
 
     public String getMessage() {

@@ -14,11 +14,11 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class DatabaseBackedUserDetailsService implements UserDetailsService {
+public class DBUserDetailsService implements UserDetailsService {
     private final UserRepository repository;
 
     @Autowired
-    public DatabaseBackedUserDetailsService(UserRepository repository) {
+    public DBUserDetailsService(UserRepository repository) {
         this.repository = repository;
     }
 
@@ -26,7 +26,6 @@ public class DatabaseBackedUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity user = repository.findByName(username);
         if (user == null) throw new UsernameNotFoundException("User not found");
-        List<SimpleGrantedAuthority> authorities = Collections.singletonList(new SimpleGrantedAuthority("user"));
-        return new User(user.getName(), user.getPassword(), authorities);
+        return new User(user.getName(), user.getPassword(), Collections.<SimpleGrantedAuthority>emptyList());
     }
 }

@@ -1,45 +1,47 @@
 <template>
   <section id="section-responses">
     <h2>Response history</h2>
-    <h:form>
-      <div class='controls-block'>
-        <h:commandButton value="CLEAR" actionListener="#{controller.clearHistory}">
-          <f:ajax render="@form request-area"/>
-        </h:commandButton>
-      </div>
-      <h:dataTable value="#{historyManager.all}" var="requestEntry">
-        <h:column>
-          <f:facet name="header">Time</f:facet>
-          <h:outputText value="#{requestEntry.time}">
-            <f:convertDateTime type="zonedDateTime" pattern="HH:mm:ss z"/>
-          </h:outputText>
-        </h:column>
-        <h:column>
-          <f:facet name="header">X</f:facet>
-          <h:outputText value="#{requestEntry.data.coordinates.x}"/>
-        </h:column>
-        <h:column>
-          <f:facet name="header">Y</f:facet>
-          <h:outputText value="#{requestEntry.data.coordinates.y}"/>
-        </h:column>
-        <h:column>
-          <f:facet name="header">R</f:facet>
-          <h:outputText value="#{requestEntry.data.radius}"/>
-        </h:column>
-        <h:column>
-          <f:facet name="header">Falls within the area</f:facet>
-          <h:outputText value="#{requestEntry.response ? 'YES' : 'NO'}"/>
-        </h:column>
-      </h:dataTable>
-    </h:form>
+    <div class='controls-block'>
+      <button type="button" @click="clearClickHandler">CLEAR</button>
+    </div>
+    <table id="response-history">
+      <thead>
+      <tr>
+        <th>Time</th>
+        <th>X</th>
+        <th>Y</th>
+        <th>R</th>
+        <th>Falls within the area</th>
+      </tr>
+      </thead>
+      <tbody id="response-history-content">
+      <tr v-for="entry in state.history">
+        <td>{{ entry.time }}</td>
+        <td>{{ entry.request.coordinates.x }}</td>
+        <td>{{ entry.request.coordinates.y }}</td>
+        <td>{{ entry.request.radius }}</td>
+        <td>{{ entry.response.outcome ? 'YES' : 'NO' }}</td>
+      </tr>
+      </tbody>
+    </table>
   </section>
 </template>
 
 <script setup>
+import state from '@/store'
 
+function clearClickHandler() {
+  state.clearHistory().catch(console.warn)
+}
 </script>
 
 <style>
+.controls-block {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5em 1%;
+}
+
 table {
   table-layout: fixed;
   border-collapse: collapse;

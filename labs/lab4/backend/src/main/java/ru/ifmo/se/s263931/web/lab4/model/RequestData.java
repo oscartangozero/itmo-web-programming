@@ -1,5 +1,7 @@
 package ru.ifmo.se.s263931.web.lab4.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
@@ -10,6 +12,7 @@ public class RequestData {
     @Embedded
     private Coordinates coordinates;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @Column(name = "radius", nullable = false)
     private BigDecimal radius;
 

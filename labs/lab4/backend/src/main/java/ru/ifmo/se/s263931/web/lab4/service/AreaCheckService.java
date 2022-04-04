@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Optional;
 
 public class AreaCheckService {
-    public static Optional<ResponseData> check(RequestData data) {
+    public static Optional<ResponseData> tryCheck(RequestData data) {
         try {
             Coordinates coordinates = data.getCoordinates();
             ResponseData responseData = new ResponseData(fallsWithinArea(coordinates.getX(), coordinates.getY(), data.getRadius()));
@@ -17,6 +17,12 @@ public class AreaCheckService {
     }
 
     private static boolean fallsWithinArea(BigDecimal x, BigDecimal y, BigDecimal r) {
+        if (r.signum() == 0) return false;
+        if (r.signum() < 0) {
+            x = x.negate();
+            y = y.negate();
+            r = r.negate();
+        }
         if (x.signum() >= 0) {
             if (y.signum() >= 0) {
                 return x.pow(2).add(y.pow(2)).multiply(BigDecimal.valueOf(4)).compareTo(r.pow(2)) <= 0;

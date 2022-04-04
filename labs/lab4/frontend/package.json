@@ -40,7 +40,13 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "comma-dangle": "off",
+      "space-before-function-paren": "off",
+      "indent": "off",
+      "vue/require-v-for-key": "warn",
+      "eqeqeq": "warn"
+    }
   },
   "browserslist": [
     "> 1%",
