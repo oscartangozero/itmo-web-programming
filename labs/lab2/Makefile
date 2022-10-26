@@ -1,4 +1,4 @@
-.PHONY = build clean run-remote deplot-local deploy-remote
+.PHONY = build clean debug deploy
 
 build: target/lab2.war
 
