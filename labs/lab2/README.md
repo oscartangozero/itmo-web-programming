@@ -1,6 +1,6 @@
 # Лабораторная работа #2
 
-<img src="img/area.png" alt="Вариант 32657" style="float:right;max-width:50%;" title="Вариант 32657" align="right">
+<img src="Projects/itmo-web-programming/labs/lab2/area.png" alt="Вариант 32657" style="float:right;max-width:50%;" title="Вариант 32657" align="right">
 
 Разработать веб-приложение на базе сервлетов и JSP, определяющее попадание точки на координатной плоскости в заданную
 область.
