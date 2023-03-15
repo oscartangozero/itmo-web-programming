@@ -1,1 +1,4 @@
-resources/
+**/target/**
+**/node/**
+**/node_modules/**
+**/resources/static/**
